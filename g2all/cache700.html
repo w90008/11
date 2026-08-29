@@ -8,7 +8,7 @@
 <script>
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){window.msgs.innerHTML="Cache Installed Successfully ✔";setTimeout(function(){window.msgs.innerHTML="الآن أغلق المتصفح وأعد فتحه...";},1500);}
+function DisplayCacheProgress(){window.msgs.innerHTML="تم تثبيت ذاكرة التخزين المؤقت بنجاح. ✔";setTimeout(function(){window.msgs.innerHTML="الآن أغلق المتصفح وأعد فتحه...";},1500);}
 window.applicationCache.addEventListener("progress",DLProgress,false);
 window.applicationCache.oncached=function(e){DisplayCacheProgress();};
 window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
